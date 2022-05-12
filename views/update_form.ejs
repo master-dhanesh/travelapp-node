@@ -1,0 +1,51 @@
+<%-  include('./header.ejs'); %>
+
+<div class="admin_home">
+    <div class="navigation_area">
+        <%-  include('./admin_navigation.ejs'); %>
+    </div>
+    <div class="update_Form">
+        <h3>UPDATE PLACE</h3>
+        <br>
+        <form method="POST" action="/update/<%= data._id %>" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" name="title" value="<%= data.title%>" class="form-control" placeholder="title">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="number" name="contact" value="<%= data.contact%>" class="form-control" placeholder="contact">
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea id="" name="description" class="form-control"  placeholder="Description..."><%= data.description%></textarea>
+            </div>
+            <label for="inputAddress2">Social Media URLS</label>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="url" name="facebook" value="<%= data.facebook%>" class="form-control" placeholder="facebook">
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="url" name="instagram" value="<%= data.instagram%>" class="form-control" placeholder="instagram">
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="email" name="gmail" value="<%= data.gmail%>" class="form-control" placeholder="gmail">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" name="location" value="<%= data.location%>" class="form-control" id="inputAddress2"
+                    placeholder="enter city">
+            </div>
+            <div class="form-group">
+                <img src="/uploads/<%= data.image%>" height="100" alt="">
+            </div>
+            <div class="form-group">
+                <small>want to change image?</small>
+                <input type="file" class="form-control" name="avatar" id="img" placeholder="upload image here">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Update Details</button>
+        </form>
+    </div>
+</div>
+
+<%- include('./footer.ejs'); %>

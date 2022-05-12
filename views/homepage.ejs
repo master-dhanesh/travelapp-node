@@ -1,0 +1,46 @@
+<div class="main-container">
+
+    <div class="left-container"></div>
+
+    <div class="right-container">
+
+        
+
+        <a href="/admin-login" class="admin-panel-button text-primary"><img src="/images/admin.png" alt=""></a>
+        
+        <h2 class="text-center">HOMEPAGE</h2>
+
+        
+        <form action="/host-place" method="GET" class="home-box search-box">
+            <input type="text" name="city" class="form-control" id="inputEmail4" placeholder="enter city">
+            &nbsp;
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        <div class="home-box city-selection">
+            <div class="city-box">
+                <% let color = ['danger', 'primary', 'warning', 'success', 'info', 'dark'] %>
+                <% data.forEach(el => { %>
+                    
+                    <a href="/host-place/<%= el%>" class="border-0 badge badge-pill badge-<%= color[Math.floor(Math.random() * 6 )]%> text-light"><%= el %></a>
+
+
+                <% }) %>
+
+            </div>
+        </div>
+
+        <form action="/send-email" method="POST" class="home-box subscribe-box">
+            <input type="email" name="email" required class="form-control col-sm-8" placeholder="example@gmail.com">
+            <br>
+            <textarea id="" name="message" required class="form-control col-sm-8" placeholder="Your Text Here..."></textarea>
+            <br>
+            <button type="submit" class="btn btn-success">Subscribe</button>
+            <!-- <a href="/register">register</a> -->
+        </form>
+
+    </div>
+
+    
+
+</div>

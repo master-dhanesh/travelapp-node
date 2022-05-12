@@ -1,0 +1,15 @@
+<% data.forEach(el => { %>
+<div class="card">
+    <img src="/uploads/<%= el.image%>" height="140" alt="">
+    <hr>
+    <p> <b> <span style="font-size: 20px;"><%= el.title%></span> | <span
+                style="font-size: 14px;"><%= el.location%></span> </b> </p>
+    <p class="card_description"><%= el.description%></p>
+    <p style="display: flex; justify-content: space-around;">
+        <a target="_blank" href="<%= el.facebook %>"><img height="16" src="/images/fb.png" alt=""></a>
+        <a target="_blank" href="<%= el.instagram %>"><img height="16" src="/images/in.png" alt=""></a>
+        <a href="mailto: <%= el.gmail %>"><img height="16" src="/images/gm.png" alt=""></a>
+        <a href="tel: <%= el.contact %>"><img height="16" src="/images/ph.png" alt=""></a>
+    </p>
+</div>
+<% }) %>

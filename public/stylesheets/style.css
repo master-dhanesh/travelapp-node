@@ -1,0 +1,203 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.main-container{
+display: flex;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.left-container{
+  width: 60%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1571333248844-316a70fb180e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  background-position: center;
+  background-size: cover;
+}
+
+.right-container{
+  width: 40%;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.home-box{
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.city-box{
+  padding: 10px 20px;
+  border: 1px solid rgb(218, 217, 217);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.admin-panel-button{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #000;
+}
+
+.search-box, .city-selection {
+  display: flex;
+}
+
+.subscribe-box textarea{
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+
+.search-box input, .subscribe-box textarea {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.822)
+}
+
+.search-box button, .subscribe-box button{
+ width: 20%;
+}
+
+.city-box .badge{
+  padding: 5px 10px;
+}
+
+
+
+.places-container{
+  width: 100%;
+  height: 100%;
+  padding: 30px 50px;
+}
+.cards{
+  flex-wrap: wrap;
+  display: flex;
+  margin: auto;
+  box-shadow: 0 0 5px rgba(2, 2, 2, 0.149);
+  padding: 10px;
+  width: 80%;
+  height: 90%;
+  overflow-y: auto;
+}
+
+.cards::-webkit-scrollbar {
+  width: 5px;
+}
+
+.cards::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.cards::-webkit-scrollbar-thumb {
+background-color: rgb(76, 76, 76);
+outline: 1px solid slategrey;
+}
+
+.card{
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.096);
+  padding: 10px;
+  width: 23.5%;
+  height: max-content;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+
+.admin_navigation{
+  padding: 10px;
+  color: rgb(110, 110, 110);
+  background-color: rgb(247, 247, 247);
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.brand_box, .navigation_list {
+  text-align: center;
+}
+
+.navigation_list ul{
+  list-style-type: none;
+  line-height: 40px;
+}
+
+.navigation_list ul a, .nav_logout{
+  text-decoration: none;
+}
+
+.admin_home{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
+}
+
+.navigation_area{
+  width: 20%;
+  height: 100%;
+  
+}
+
+.cards_data_area{
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 80%;
+}
+
+.add_Form{
+  display: flex;
+  padding: 20px;
+  width: 80%;
+  height: 100%;
+}
+
+.update_Form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+
+}
+
+.card_description{
+  padding-right: 5px;
+  font-size: 12px; 
+  height: 80px; 
+  overflow-y: auto;
+}
+
+.card_description::-webkit-scrollbar {
+  width: 3px;
+}
+
+.card_description::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.card_description::-webkit-scrollbar-thumb {
+background-color: rgb(76, 76, 76);
+outline: 1px solid slategrey;
+}

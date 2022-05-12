@@ -1,0 +1,14 @@
+<%-  include('./header.ejs'); %>
+
+<div class="places-container">
+    <div class="d-flex justify-content-between">
+    <h3>Found Places in <span class="text-primary"><%= place.toUpperCase() %></span> City</h3>
+    <a href="/"><img src="/images/exit.png" height="32" alt=""></a>
+    </div>
+    <hr>
+    <div class="cards">
+    <%- include('./card.ejs'); %>                    
+    </div>
+</div>
+
+<%- include('./footer.ejs'); %>
